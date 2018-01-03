@@ -1,4 +1,4 @@
-import * as React from 'react';
+﻿import * as React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 export class NavMenu extends React.Component<{}, {}> {
@@ -12,24 +12,39 @@ export class NavMenu extends React.Component<{}, {}> {
                         <span className='icon-bar'></span>
                         <span className='icon-bar'></span>
                     </button>
-                    <Link className='navbar-brand' to={ '/' }>CertifikacijaWebApp</Link>
+                    <Link className='navbar-brand' to={ '/' }>Certifikacija Web App</Link>
                 </div>
                 <div className='clearfix'></div>
                 <div className='navbar-collapse collapse'>
                     <ul className='nav navbar-nav'>
                         <li>
                             <NavLink to={ '/' } exact activeClassName='active'>
-                                <span className='glyphicon glyphicon-home'></span> Home
+                                <span className='glyphicon glyphicon-home'></span> Dashboard
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={'/counter'} activeClassName='active'>
+                                <span className='glyphicon glyphicon-education'></span> Kandidati
                             </NavLink>
                         </li>
                         <li>
                             <NavLink to={ '/counter' } activeClassName='active'>
-                                <span className='glyphicon glyphicon-education'></span> Counter
+                                <span className='glyphicon glyphicon-education'></span> Kreiranje certifikata
                             </NavLink>
                         </li>
                         <li>
                             <NavLink to={ '/fetchdata' } activeClassName='active'>
-                                <span className='glyphicon glyphicon-th-list'></span> Fetch data
+                                <span className='glyphicon glyphicon-th-list'></span> Print certifikata
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={'/fetchdata'} activeClassName='active'>
+                                <span className='glyphicon glyphicon-th-list'></span> Računi
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={'/fetchdata'} activeClassName='active'>
+                                <span className='glyphicon glyphicon-th-list'></span> Virmani
                             </NavLink>
                         </li>
                     </ul>

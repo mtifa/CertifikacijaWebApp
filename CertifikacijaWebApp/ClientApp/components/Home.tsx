@@ -4,7 +4,7 @@ import { RouteComponentProps } from 'react-router';
 export class Home extends React.Component<RouteComponentProps<{}>, {}> {
     public render() {
         return <div>
-            <h1>Hello, world!</h1>
+            <h1>Dobrodošli!</h1>
             <p>Welcome to your new single-page application, built with:</p>
             <ul>
                 <li><a href='https://get.asp.net/'>ASP.NET Core</a> and <a href='https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx'>C#</a> for cross-platform server-side code</li>
@@ -19,11 +19,7 @@ export class Home extends React.Component<RouteComponentProps<{}>, {}> {
                 <li><strong>Hot module replacement</strong>. In development mode, you don't even need to reload the page after making most changes. Within seconds of saving changes to files, rebuilt React components will be injected directly into your running application, preserving its live state.</li>
                 <li><strong>Efficient production builds</strong>. In production mode, development-time features are disabled, and the <code>webpack</code> build tool produces minified static CSS and JavaScript files.</li>
             </ul>
-            <h4>Going further</h4>
-            <p>
-                For larger applications, or for server-side prerendering (i.e., for <em>isomorphic</em> or <em>universal</em> applications), you should consider using a Flux/Redux-like architecture.
-                You can generate an ASP.NET Core application with React and Redux using <code>dotnet new reactredux</code> instead of using this template.
-            </p>
+            
         </div>;
     }
 }
