@@ -12,7 +12,17 @@ export class NavMenu extends React.Component<{}, {}> {
                         <span className='icon-bar'></span>
                         <span className='icon-bar'></span>
                     </button>
-                    <Link className='navbar-brand' to={ '/' }>Certifikacija Web App</Link>
+                    <img src="logo.png"/>
+                </div>
+                <div className='clearfix'></div>
+                <div className='navbar-collapse collapse'>
+                    <ul className='nav navbar-nav'>
+                        <li>
+                            <NavLink to={'/user'} exact activeClassName='active'>
+                                <span className='glyphicon glyphicon-user'></span> User
+                            </NavLink>
+                        </li>
+                    </ul>
                 </div>
                 <div className='clearfix'></div>
                 <div className='navbar-collapse collapse'>
@@ -23,28 +33,43 @@ export class NavMenu extends React.Component<{}, {}> {
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to={'/counter'} activeClassName='active'>
-                                <span className='glyphicon glyphicon-education'></span> Kandidati
+                            <NavLink to={'/polaznici'} activeClassName='active'>
+                                <span className='glyphicon glyphicon-education'></span> Polaznici
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to={ '/counter' } activeClassName='active'>
-                                <span className='glyphicon glyphicon-education'></span> Kreiranje certifikata
+                            <NavLink to={'/pitanja'} activeClassName='active'>
+                                <span className='glyphicon glyphicon-question-sign'></span> Pitanja i odgovori
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to={ '/fetchdata' } activeClassName='active'>
-                                <span className='glyphicon glyphicon-th-list'></span> Print certifikata
+                            <NavLink to={ '/rezultati' } activeClassName='active'>
+                                <span className='glyphicon glyphicon-education'></span> Rezultati
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to={'/fetchdata'} activeClassName='active'>
-                                <span className='glyphicon glyphicon-th-list'></span> Računi
+                            <NavLink to={ '/certifikati' } activeClassName='active'>
+                                <span className='glyphicon glyphicon-certificate'></span> Certifikati
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to={'/fetchdata'} activeClassName='active'>
-                                <span className='glyphicon glyphicon-th-list'></span> Virmani
+                            <NavLink to={'/racuni'} activeClassName='active'>
+                                <span className='glyphicon glyphicon-print'></span> Računi
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={'/virmani'} activeClassName='active'>
+                                <span className='glyphicon glyphicon-print'></span> Virmani
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={'/catalog'} activeClassName='active'>
+                                <span className='glyphicon glyphicon-th-list'></span> Catalog Example
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={'/kalendar'} activeClassName='active'>
+                                <span className='glyphicon glyphicon-calendar'></span> Kalendar
                             </NavLink>
                         </li>
                     </ul>

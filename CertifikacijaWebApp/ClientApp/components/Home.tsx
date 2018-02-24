@@ -19,7 +19,7 @@ export class Home extends React.Component<RouteComponentProps<{}>, {}> {
                 <li><strong>Hot module replacement</strong>. In development mode, you don't even need to reload the page after making most changes. Within seconds of saving changes to files, rebuilt React components will be injected directly into your running application, preserving its live state.</li>
                 <li><strong>Efficient production builds</strong>. In production mode, development-time features are disabled, and the <code>webpack</code> build tool produces minified static CSS and JavaScript files.</li>
             </ul>
-            
+            <p>This will be a statistics!</p>
         </div>;
     }
 }

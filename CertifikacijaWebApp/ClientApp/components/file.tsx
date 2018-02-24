@@ -1,13 +1,12 @@
 ﻿import * as React from 'react';
 import { RouteComponentProps } from 'react-router';
-import 'isomorphic-fetch';
 
-interface FetchDataExampleState {
+interface FetchCatalogDataState {
     forecasts: WeatherForecast[];
-    loading: boolean;
+    loading: boolean; 
 }
 
-export class FetchData extends React.Component<RouteComponentProps<{}>, FetchDataExampleState> {
+export class FetchCatalogData extends React.Component<RouteComponentProps<{}>, FetchCatalogDataState> {
     constructor() {
         super();
         this.state = { forecasts: [], loading: true };
@@ -22,34 +21,34 @@ export class FetchData extends React.Component<RouteComponentProps<{}>, FetchDat
     public render() {
         let contents = this.state.loading
             ? <p><em>Učitavanje...</em></p>
-            : FetchData.renderForecastsTable(this.state.forecasts);
+            : FetchCatalogData.renderCatalogTable(this.state.forecasts);
 
         return <div>
-            <h1>Weather forecast</h1>
+            <h1>Catalog</h1>
             <p>This component demonstrates fetching data from the server.</p>
-            { contents }
+            {contents}
         </div>;
     }
 
-    private static renderForecastsTable(forecasts: WeatherForecast[]) {
+    private static renderCatalogTable(forecasts: WeatherForecast[]) {
         return <table className='table'>
             <thead>
                 <tr>
-                    <th>Date</th>
-                    <th>Temp. (C)</th>
-                    <th>Temp. (F)</th>
-                    <th>Summary</th>
+                    <th>Image</th>
+                    <th>Title</th>
+                    <th>Author / Director</th>
+                    <th>Dewey Call Number</th>
                 </tr>
             </thead>
             <tbody>
-            {forecasts.map(forecast =>
-                <tr key={ forecast.dateFormatted }>
-                    <td>{ forecast.dateFormatted }</td>
-                    <td>{ forecast.temperatureC }</td>
-                    <td>{ forecast.temperatureF }</td>
-                    <td>{ forecast.summary }</td>
-                </tr>
-            )}
+                {forecasts.map(forecast =>
+                    <tr key={forecast.dateFormatted}>
+                        <td>{forecast.dateFormatted}</td>
+                        <td>{forecast.temperatureC}</td>
+                        <td>{forecast.temperatureF}</td>
+                        <td>{forecast.summary}</td>
+                    </tr>
+                )}
             </tbody>
         </table>;
     }
